@@ -25,10 +25,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := full_hammerhead
 PRODUCT_DEVICE := hammerhead
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on HammerHead
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_RESTRICT_VENDOR_FILES := true
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hammerhead BUILD_FINGERPRINT="google/hammerhead/hammerhead:4.4.2/KOT49H/937116:user/release-keys" PRIVATE_BUILD_DESC="hammerhead-user 4.4.2 KOT49H 937116 release-keys"
+
+TARGET_TOOLS_PREFIX ?= prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro/bin/arm-linux-androideabi-
 
 $(call inherit-product, device/lge/hammerhead/device.mk)
-$(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
