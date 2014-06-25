@@ -102,8 +102,6 @@ TARGET_RECOVERY_FSTAB = device/lge/hammerhead/fstab.hammerhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead
 
-PDK_PLATFORM_ZIP_PRODUCT_BINARIES := device/lge/hammerhead-kernel/vmlinux.bz2
-
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 
 BOARD_SEPOLICY_DIRS := \
@@ -140,5 +138,3 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 # Toolchain Definitions
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := Linaro-4.7
 TARGET_GCC_VERSION_AND := 4.8
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN_PREFIX := arm-cortex_a15-linux-gnueabihf-
-#TARGET_GCC_VERSION_ARM := 4.7
